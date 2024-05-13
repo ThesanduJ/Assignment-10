@@ -3,8 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <style>
+        #background {
+            background-image: url("assets/img/pexels-mateusz-dach-99805-3516751.jpg");
+            width: 100%;
+            height: 100vh;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+        #cal{
+            width: 70%;
+            height: 80%;
+            background: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            opacity: 70%;
+        }
+        #clsBtn{
+            width: 100px;
+            height: 70px;
+            border-color: transparent;
+            background-color: coral;
+            color: white;
+            font-size: 30px;
+            position: relative;
+            margin: 20px;
+            cursor: pointer;
+        }
+        #display{
+            width: 867px;
+            height: 70px;
+            background-color: white ;
+            position: absolute;
+            top: 0;
+            left: 160px;
+            cursor: text;
+        }
+        #btnGrid{
+            position: absolute;
+            width: fit-content;
+            height: fit-content;
+            top: 150px;
+            display: grid;
+            grid-template-columns:150px 150px 150px 150px;
+            padding: 10px;
+            column-gap: 70px;
+            row-gap: 32px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        #btnGrid>button{
+            width: 200px;
+            height: 70px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
+<section id="background">
+    <div id="cal">
+        <button id="clsBtn" type="submit">C</button>
+        <h1 id="display"></h1>
 
+        <div id="btnGrid">
+            <button id="btn-01" type="submit">7</button>
+            <button id="btn-02" type="submit">8</button>
+            <button id="btn-03" type="submit">9</button>
+            <button style="background-color: lightsalmon" id="btn-04" type="submit">+</button>
+            <button id="btn-05" type="submit">4</button>
+            <button id="btn-06" type="submit">5</button>
+            <button id="btn-07" type="submit">6</button>
+            <button style="background-color: lightsalmon" id="btn-08" type="submit">-</button>
+            <button id="btn-09" type="submit">1</button>
+            <button id="btn-10" type="submit">2</button>
+            <button id="btn-11" type="submit">3</button>
+            <button style="background-color: lightsalmon" id="btn-12" type="submit">/</button>
+            <button id="btn-13" type="submit">0</button>
+            <button id="btn-14" type="submit">.</button>
+            <button style="background-color: aqua" id="btn-15" type="submit">=</button>
+            <button style="background-color: lightsalmon" id="btn-16" type="submit">*</button>
+
+        </div>
+    </div>
+</section>
+<script src="assets/jquery-3.7.1.min.js"></script>
 </body>
 </html>
