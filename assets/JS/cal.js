@@ -18,7 +18,8 @@ function updateCurrentDisplay() {
 
 function cal() {
     const output = eval(cDisplay);
-    cDisplay += "\n=" + output.toString();
+    clearTheDisplay();
+    cDisplay += output.toString();
     updateCurrentDisplay();
 
     displayValue = true;
@@ -26,6 +27,12 @@ function cal() {
 
 function clearAll() {
     cDisplay = "0";
+    displayValue = false;
+    updateCurrentDisplay();
+}
+
+function clearTheDisplay() {
+    cDisplay = "";
     displayValue = false;
     updateCurrentDisplay();
 }
