@@ -17,25 +17,15 @@ function updateCurrentDisplay() {
 }
 
 function cal() {
-    try {
-        const output = eval(cDisplay);
-        cDisplay += "\n=" + output.toString();
-        updateCurrentDisplay();
-    } catch (error) {
-        clearTheDisplay()
-        cDisplay += "\nerror";
-        updateCurrentDisplay();
-    }
+    const output = eval(cDisplay);
+    cDisplay += "\n=" + output.toString();
+    updateCurrentDisplay();
+
     displayValue = true;
 }
 
 function clearAll() {
     cDisplay = "0";
-    displayValue = false;
-    updateCurrentDisplay();
-}
-function clearTheDisplay() {
-    cDisplay = "";
     displayValue = false;
     updateCurrentDisplay();
 }
