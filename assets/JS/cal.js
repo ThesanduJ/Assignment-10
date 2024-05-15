@@ -15,3 +15,15 @@ function updateCurrentDisplay() {
     const dValue = $("#display");
     dValue.text(cDisplay);
 }
+
+function cal() {
+    try {
+        const output = eval(cDisplay);
+        cDisplay += "\n=" + output.toString();
+        updateCurrentDisplay();
+    } catch (error) {
+        cDisplay += "\nerror";
+        updateCurrentDisplay();
+    }
+    displayValue = true;
+}
