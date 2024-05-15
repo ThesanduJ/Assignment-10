@@ -22,6 +22,7 @@ function cal() {
         cDisplay += "\n=" + output.toString();
         updateCurrentDisplay();
     } catch (error) {
+        clearTheDisplay()
         cDisplay += "\nerror";
         updateCurrentDisplay();
     }
@@ -30,6 +31,11 @@ function cal() {
 
 function clearAll() {
     cDisplay = "0";
+    displayValue = false;
+    updateCurrentDisplay();
+}
+function clearTheDisplay() {
+    cDisplay = "";
     displayValue = false;
     updateCurrentDisplay();
 }
