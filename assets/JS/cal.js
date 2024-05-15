@@ -8,4 +8,10 @@ function displayInCal(value) {
         cDisplay += value;
     }
     displayValue = false;
+    updateCurrentDisplay();
+}
+
+function updateCurrentDisplay() {
+    const dValue = $("#display");
+    dValue.text(cDisplay);
 }
