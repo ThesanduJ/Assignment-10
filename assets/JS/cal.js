@@ -27,3 +27,9 @@ function cal() {
     }
     displayValue = true;
 }
+
+function clearAll() {
+    cDisplay = "0";
+    displayValue = false;
+    updateCurrentDisplay();
+}
